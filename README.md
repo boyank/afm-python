@@ -21,10 +21,7 @@ pip install lytrax-afm
 Import functions:
 
 ```python
-from lytrax_afm import validateAFM, \
-    generateAFM, \
-    generateValidAFM, \
-    generateInvalidAFM
+from lytrax_afm import validate_afm, generate_afm, generate_valid_afm, generate_invalid_afm
 ```
 
 Validate a number:
