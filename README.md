@@ -51,7 +51,7 @@ Generate an invalid number:
 ## API
 
 **validate_afm**
-* `afm: str` - A string to be check if it's a valid AFM
+* `afm: str` - A string to be check if it's a valid TIN/AFM
 * `extended_result: bool, optional` - Return extended object result if True, single boolean otherwise (default is False)
 * **Returns**: `str` or `dict` (Dictionary with `'valid': boolean` and `'error': str ('length' or 'nan' or 'zero' or 'invalid')`)
 
@@ -63,7 +63,7 @@ Example:
 
 **generate_afm**
 * `force_first_digit: int, optional` - If specified, overrides all pre99, legalEntity and individual (default is None)
-* `pre99: bool, optional` - For TIN before 1/1/1999 (starts with 0),
+* `pre99: bool, optional` - For TIN/AFM before 1/1/1999 (starts with 0),
   (if True, overrides both legal_entity and individual)
   (default is False)
 * `individual: bool, optional` - Natural persons, (starts with 1-4) (default is False)
@@ -71,8 +71,8 @@ Example:
 * `repeat_tolerance : int, optional` - Number for max repeat tolerance
   (0 for no repeats, unspecified for no check)
   (default is None)
-* `valid: bool, optional` - Generate valid or invalid AFM (default is True)
-* **Returns**: `str` - A valid or invalid 9 digit AFM number
+* `valid: bool, optional` - Generate valid or invalid TIN/AFM (default is True)
+* **Returns**: `str` - A valid or invalid 9 digit TIN/AFM number
 
 Example:
 ```python
@@ -81,7 +81,7 @@ Example:
 ```
 
 **generate_valid_afm** - Same as `generate_afm` with `valid` parameter force and override to `True`
-* **Returns**: `str` - A valid 9 digit AFM number
+* **Returns**: `str` - A valid 9 digit TIN/AFM number
 
 Example:
 ```python
@@ -90,7 +90,7 @@ Example:
 ```
 
 **generate_invalid_afm** - Same as `generate_afm` with `valid` parameter force and override to `False`
-* **Returns**: `str` - An invalid 9 digit AFM number
+* **Returns**: `str` - An invalid 9 digit TIN/AFM number
 
 Example:
 ```python
