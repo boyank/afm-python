@@ -10,31 +10,31 @@ def generate_afm(
     repeat_tolerance: int = None,
     valid: bool = True
 ) -> str:
-    """Generates an AFM number based on object parameters
+    """Generates an TIN/AFM number based on object parameters
 
     Parameters
     ----------
     force_first_digit : int, optional
         If specified, overrides all pre99, legal_entity and individual (default is None)
     pre99 : bool, optional
-        Για ΑΦΜ πριν από 1/1/1999 (ξεκινάει με 0),
+        For TIN/AFM before 1/1/1999 (starts with 0),
         (if True, overrides both legal_entity and individual)
         (default is False)
     individual : bool, optional
-        Φυσικά πρόσωπα, (ξεκινάει με 1-4) (default is False)
+        Natural persons, (starts with 1-4) (default is False)
     legal_entity : bool, optional
-        Νομικές οντότητες (ξεκινάει με 7-9) (default is False)
+        Legal entities (starts 7-9) (default is False)
     repeat_tolerance : int, optional
         Number for max repeat tolerance
         (0 for no repeats, unspecified for no check)
         (default is None)
     valid : bool, optional
-        Generate valid or invalid AFM (default is True)
+        Generate valid or invalid TIN/AFM (default is True)
 
     Returns
     -------
     str
-        A valid or invalid 9 digit AFM number
+        A valid or invalid 9 digit TIN/AFM number
     """
     min = 7 if legal_entity else 1
     max = 4 if individual else 9
