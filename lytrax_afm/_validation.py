@@ -35,13 +35,13 @@ def validate_afm(afm: str, extended_result: bool = False):
         } if extended_result else False
 
     body = afm[:8]
-    sum = 0
+    weighted_sum = 0
     
     for i in range(len(body)):
         digit = body[i]
-        sum += int(digit) << (8 - i)
+        weighted_sum += int(digit) << (8 - i)
     
-    calc = sum % 11;
+    calc = weighted_sum % 11
     d9 = int(afm[8])
     valid = calc % 10 == d9
 
