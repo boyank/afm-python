@@ -64,7 +64,7 @@ def generate_afm(
     return body + str(d9)
 
 def generate_valid_afm(**args) -> str:
-    """Generates a valid AFM number based on object parameters.
+    """Generates a valid TIN/AFM number based on object parameters.
 
     Parameters
     ----------
@@ -92,7 +92,7 @@ def generate_valid_afm(**args) -> str:
     return generate_afm(**args)
 
 def generate_invalid_afm(**args) -> str:
-    """Generates an invalid AFM number based on object parameters.
+    """Generates an invalid TIN/AFM number based on object parameters.
 
     Parameters
     ----------
